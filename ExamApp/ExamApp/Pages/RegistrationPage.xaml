@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExamApp.Pages.RegistrationPage">
+    <NavigationPage.TitleView>
+        <Label Text="Регистрация" FontSize="Large" TextColor="White"  Margin="75,0"></Label>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Padding="10">
+            <StackLayout Orientation="Horizontal" Spacing="30">
+                <StackLayout Orientation="Vertical" Spacing="8">
+                    <Label Text="Email" FontSize="Medium"/>
+                    <Entry x:Name="entEmail" Keyboard="Email" FontSize="24" WidthRequest="380"/>
+                    <Label Text="Логин" FontSize="Medium"/>
+                    <Entry x:Name="entLogin" Keyboard="Email" FontSize="24" WidthRequest="380"/>
+                    <Label Text="Пароль" FontSize="Medium"/>
+                    <Entry x:Name="entPassword" FontSize="24" IsPassword="True" WidthRequest="380"/>
+                    <Label Text="Потверждения пароля" FontSize="Medium"/>
+                    <Entry x:Name="entPassword2" FontSize="24" IsPassword="True" WidthRequest="380"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="Reg" Text="Зарегистрироваться" HorizontalOptions="FillAndExpand" Clicked="Button_Clicked_Auth"/>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

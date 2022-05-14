@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExamApp.Pages.AuthorizationPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Spacing="20" Padding="20">
+            <Image Source="logo.png" Margin="0, 0, 0, 40"/>
+            <StackLayout Orientation="Horizontal" Spacing="30">
+                <StackLayout Orientation="Vertical" Spacing="5">
+                    <Label Text="Логин" FontSize="Medium"/>
+                    <Entry x:Name="entLogin" Keyboard="Email" FontSize="24" WidthRequest="360"/>
+                    <Label Text="Пароль" FontSize="Medium"/>
+                    <Entry x:Name="entPassword" FontSize="24" IsPassword="True" WidthRequest="360"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="Reg" Text="Зарегистрироваться" HorizontalOptions="FillAndExpand" Clicked="Button_Registr_Clicked"/>
+                <Button x:Name="Auth" Text="Войти" HorizontalOptions="FillAndExpand" Clicked="Button_Login_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

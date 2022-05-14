@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExamApp.Pages.EditPage">
+    <NavigationPage.TitleView>
+        <Label Text="Изменить автомобиль" FontSize="24" TextColor="White"  Margin="20,0"/>
+    </NavigationPage.TitleView>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            IconImageSource="Delete.png"
+            Order="Primary" Clicked="Delete_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content >
+        <ScrollView>
+            <StackLayout >
+                <Frame Margin="40,40,40,30"
+                   Padding="0" BorderColor="#E8E8E8">
+                    <Entry Text="{Binding Name}" FontFamily="Font" x:Name="txt_AddName" BackgroundColor="#E8E8E8" Placeholder="Имя проекта" TextColor="Black" />
+                </Frame>
+
+                <Frame Margin="40,0,40,30"
+                   Padding="0" 
+                       HeightRequest="200"
+                       BorderColor="#E8E8E8">
+                    <Editor HeightRequest="200" Text="{Binding Description}" FontFamily="Font" x:Name="txt_AddDescription" BackgroundColor="#E8E8E8" Placeholder="Описание" TextColor="Black" />
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
